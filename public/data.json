@@ -3,36 +3,42 @@
         "id": 1,
         "img": "./images/gym-dumple.jfif",
         "title": "Dumbbell",
+        "time": 20,
         "description": "Dumbbells are weights used without exercise machines. Dumbbells are sometimes also called hand weights and free weights—those used “free” of such equipment."
     },
     {
         "id": 2,
         "img": "./images/leg-curl.PNG",
         "title": "Leg Curl",
+        "time": 25,
         "description": "It involves bending your knees and moving your heels toward your butt while the rest of your body stays still. Typically, the exercise is done on a leg curl machine."
     },
     {
         "id":3,
         "img": "./images/leg-extension.PNG",
         "title": "Leg Extension",
+        "time": 10,
         "description": "Leg extensions are done on a leg extension machine. You sit on the machine with a weighted pad on top of your lower legs. Then you use your quads to repeatedly extend your knees and lift your lower legs."
     },
     {
         "id": 4,
         "img": "./images/leg-press.PNG",
         "title": "Leg Press",
+        "time": 15,
         "description": "The leg press is a compound weight training exercise in which the individual pushes a weight or resistance away from them using their legs. The term leg press machine refers to the apparatus used to perform this exercise."
     },
     {
         "id": 5,
         "img": "./images/runner.PNG",
         "title": "Runner",
+        "time": 30,
         "description": "Running is the best workout because it's the most basic human form of exercise, using your own body, weight, and two legs to propel yourself forward."
     },
     {
         "id": 6,
         "img": "./images/squard.PNG",
         "title": "Squard",
+        "time": 20,
         "description": "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up. During the descent of a squat, the hip and knee joints flex while the ankle joint dorsiflexes; conversely the hip and knee joints extend and the ankle joint plantarflexes when standing up."
     }
 ]
