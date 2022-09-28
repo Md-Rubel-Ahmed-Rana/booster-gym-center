@@ -6,11 +6,11 @@ import Persons from "./components/Persons/Persons";
 function App() {
   return (
     <div className="header-persons">
-      <div>
+      <div className="main-section">
         <Header />
         <Persons />
       </div>
-      <div className="d-flex justify-content-between ">
+      <div>
           <Cart />
       </div>
       

@@ -1,5 +1,8 @@
 .header-persons{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 50px;
+    display: flex;
+    grid-gap: 20px;
+}
+
+.main-section{
+    width: 1000px;
 }
