@@ -1,3 +1,4 @@
+
 import "./Person.css"
 const Person = ({ person, handleTime }) => {
     const {img, title, description, time} = person;

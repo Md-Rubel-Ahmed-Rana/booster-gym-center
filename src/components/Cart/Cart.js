@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
+import { getStoredTime } from '../../FakeDB/FakeDB';
 import "./Cart.css"
 import Rubel from "./rubel.jpg"
  
 const Cart = ({person}) => {
     const [breakTime, setBreakTime] = useState(0);
+    let savedTime = getStoredTime();
+    if(!savedTime){
+        savedTime = 0;
+    }
     const handleBreakTime = (time) => {
         setBreakTime(time)
-        console.log(time);
     }
 
     let newTime = 0;
     for(const newPerson of person){
-        newTime = newTime + newPerson.time;
+            newTime = newTime + newPerson.time;
     }
     return (
         <div className='cart'>
@@ -50,7 +54,7 @@ const Cart = ({person}) => {
                 <h4>Exercise Details</h4>
                 <div className='d-flex justify-content-between p-2 bg-light'>
                     <h6>Exercise Time</h6>
-                    <p><strong>{newTime}</strong> Minutes</p>
+                    <p><strong>{newTime ? newTime : savedTime}</strong> Minutes</p>
                 </div>
             </div>
             <div className='d-flex justify-content-between mt-3 bg-light p-2'>

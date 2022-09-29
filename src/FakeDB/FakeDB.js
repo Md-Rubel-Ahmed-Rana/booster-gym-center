@@ -18,7 +18,7 @@ const addToDb = (addedTime) => {
 }
 
 const getStoredTime = () => {
-    let time = {};
+    let time = 0;
 
     const storedTime = localStorage.getItem('time');
     if (storedTime) {
