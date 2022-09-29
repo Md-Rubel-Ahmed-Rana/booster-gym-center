@@ -1,8 +1,14 @@
-
+import React, { useState } from 'react';
 import "./Cart.css"
 import Rubel from "./rubel.jpg"
  
 const Cart = ({person}) => {
+    const [breakTime, setBreakTime] = useState(0);
+    const handleBreakTime = (time) => {
+        setBreakTime(time)
+        console.log(time);
+    }
+
     let newTime = 0;
     for(const newPerson of person){
         newTime = newTime + newPerson.time;
@@ -33,11 +39,11 @@ const Cart = ({person}) => {
             <div className='m-4'>
                 <h3>Add A Break</h3>
                 <div className='break-time bg-light p-3'>
-                    <button><small>10</small>M</button>
-                    <button><small>20</small>M</button>
-                    <button><small>30</small>M</button>
-                    <button><small>40</small>M</button>
-                    <button><small>50</small>M</button>
+                    <button onClick={() => handleBreakTime(10)}><small>10</small>M</button>
+                    <button onClick={() => handleBreakTime(20)}><small>20</small>M</button>
+                    <button onClick={() => handleBreakTime(30)}><small>30</small>M</button>
+                    <button onClick={() => handleBreakTime(40)}><small>40</small>M</button>
+                    <button onClick={() => handleBreakTime(50)}><small>50</small>M</button>
                 </div>
             </div>
             <div className='time-details'>
@@ -49,7 +55,7 @@ const Cart = ({person}) => {
             </div>
             <div className='d-flex justify-content-between mt-3 bg-light p-2'>
                 <h4>Break Time</h4>
-                <p><small></small> Minutes</p>
+                <p><small>{breakTime}</small> Minutes</p>
             </div>
         </div>
     );
