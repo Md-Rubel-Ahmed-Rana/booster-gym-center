@@ -68,12 +68,12 @@ const Cart = ({person}) => {
             </div>
             <div className='time-details'>
                 <h4>Exercise Details</h4>
-                <div className='d-flex justify-content-between p-2 bg-light'>
+                <div className='d-flex justify-content-between align-items-center p-2 bg-light rounded'>
                     <h6>Exercise Time</h6>
-                    <p><strong>{newTime}</strong> Minutes</p>
+                    <p className='mt-2'><strong>{newTime}</strong> Minutes</p>
                 </div>
             </div>
-            <div className='d-flex justify-content-between mt-3 bg-light p-2'>
+            <div className='d-flex justify-content-between mt-3 bg-light p-2 rounded'>
                 <h4>Break Time</h4>
                 <p><strong>{breakTime}</strong> Minutes</p>
             </div>

@@ -2,6 +2,8 @@ import React from 'react';
 
 const Questions = () => {
     return (
+        <>
+        <h2 className='text-center mb-4'>Read React Basic Concept</h2>
         <div className='d-lg-flex gap-3 text-white'>
             <div className='bg-secondary p-2 rounded'>
                 <h5>How does ReactJs work?</h5>
@@ -16,6 +18,7 @@ const Questions = () => {
                 <p>Simply useEffect is the side of ReactJS. Without fetching data, useEffect uses setInterval, setTimeout and others. Specially it give a super oportunity to loadData from server depend on another data or state.</p>
             </div>
         </div>
+        </>
     );
 };
 
