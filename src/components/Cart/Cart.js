@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "./Cart.css"
 import Rubel from "./rubel.jpg"
-import swal from 'sweetalert'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
  
 const getStoredTime = () => {
     let time = 0;
-
+    
     const storedTime = localStorage.getItem('time');
     if (storedTime) {
         time = JSON.parse(storedTime);
@@ -14,6 +15,7 @@ const getStoredTime = () => {
 }
 
 const Cart = ({person}) => {
+    const notify = () => toast("Congratulations!, You have done your activity.");
     const [breakTime, setBreakTime] = useState(0);
 
     
@@ -76,7 +78,10 @@ const Cart = ({person}) => {
                 <p><strong>{breakTime}</strong> Minutes</p>
             </div>
             <div>
-                <h3 onClick={() => swal("Congratulations!", "You completed your activities", "success")} className='activity'>Activity Completed</h3>
+                <h3 onClick={notify} className='activity'>
+                    Activity Completed
+                    <ToastContainer />
+                </h3>
             </div>
         </div>
     );
