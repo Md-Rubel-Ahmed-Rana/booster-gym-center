@@ -3,6 +3,7 @@ import "./Persons.css"
 import Person from '../Person/Person';
 import Cart from '../Cart/Cart';
 import Header from '../Header/Header';
+import { addToDb } from '../../FakeDB/FakeDB';
 
 
 const Persons = () => {
@@ -15,7 +16,8 @@ const Persons = () => {
     }, [])
     const handleTime = (pinnedPerson) => {
         const newPerson = [...person,pinnedPerson]
-        setPerson(newPerson)
+        setPerson(newPerson);
+        addToDb(pinnedPerson.time)
     }
     return (
         <div>
