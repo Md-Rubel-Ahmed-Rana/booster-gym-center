@@ -3,6 +3,7 @@ import "./Persons.css"
 import Person from '../Person/Person';
 import Cart from '../Cart/Cart';
 import Header from '../Header/Header';
+import Questions from '../Questions/Questions';
 
 const Persons = () => {
     const [persons, setPersons] = useState([]);
@@ -31,6 +32,7 @@ const Persons = () => {
                             />)
                         }
                     </div>
+                    <Questions />
                 </div>
                 <div>
                     <Cart person={person}/>
