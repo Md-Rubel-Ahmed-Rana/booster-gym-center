@@ -3,8 +3,6 @@ import "./Persons.css"
 import Person from '../Person/Person';
 import Cart from '../Cart/Cart';
 import Header from '../Header/Header';
-import { addToDb } from '../../FakeDB/FakeDB';
-
 
 const Persons = () => {
     const [persons, setPersons] = useState([]);
@@ -13,11 +11,11 @@ const Persons = () => {
         fetch("data.json")
         .then((res) => res.json())
             .then((data) => setPersons(data))
-    }, [])
+    }, []);
+
     const handleTime = (pinnedPerson) => {
         const newPerson = [...person,pinnedPerson]
         setPerson(newPerson);
-        addToDb(pinnedPerson.time)
     }
     return (
         <div>

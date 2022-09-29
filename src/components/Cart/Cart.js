@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
-import { getStoredTime } from '../../FakeDB/FakeDB';
+import React, { useEffect, useState } from 'react';
 import "./Cart.css"
 import Rubel from "./rubel.jpg"
+import swal from 'sweetalert'
  
+const getStoredTime = () => {
+    let time = 0;
+
+    const storedTime = localStorage.getItem('time');
+    if (storedTime) {
+        time = JSON.parse(storedTime);
+    }
+    return time;
+}
+
 const Cart = ({person}) => {
     const [breakTime, setBreakTime] = useState(0);
-    let savedTime = getStoredTime();
-    if(!savedTime){
-        savedTime = 0;
-    }
+
+    
+    useEffect(() => {
+        const storedTime = getStoredTime();
+        setBreakTime(storedTime)
+    }, [breakTime])
+
     const handleBreakTime = (time) => {
-        setBreakTime(time)
+        setBreakTime(time);
+        localStorage.setItem("time", JSON.stringify(time))
     }
 
     let newTime = 0;
@@ -54,7 +68,7 @@ const Cart = ({person}) => {
                 <h4>Exercise Details</h4>
                 <div className='d-flex justify-content-between p-2 bg-light'>
                     <h6>Exercise Time</h6>
-                    <p><strong>{newTime ? newTime : savedTime}</strong> Minutes</p>
+                    <p><strong>{newTime}</strong> Minutes</p>
                 </div>
             </div>
             <div className='d-flex justify-content-between mt-3 bg-light p-2'>
@@ -62,7 +76,7 @@ const Cart = ({person}) => {
                 <p><strong>{breakTime}</strong> Minutes</p>
             </div>
             <div>
-                <h3 className='activity'>Activity Completed</h3>
+                <h3 onClick={() => swal("Congratulations!", "You completed your activities", "success")} className='activity'>Activity Completed</h3>
             </div>
         </div>
     );
