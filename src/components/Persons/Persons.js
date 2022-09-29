@@ -7,23 +7,31 @@ import Header from '../Header/Header';
 
 const Persons = () => {
     const [persons, setPersons] = useState([]);
+    const [person, setPerson] = useState([]);
     useEffect(() => {
         fetch("data.json")
         .then((res) => res.json())
             .then((data) => setPersons(data))
     }, [])
-
+    const handleTime = (pinnedPerson) => {
+        const newPerson = [...person,pinnedPerson ]
+        setPerson(newPerson)
+    }
     return (
         <div>
             <Header />
             <div className="main-section">
                 <div className='persons'>
                     {
-                        persons.map((person) => <Person person={person} key={person.id} />)
+                        persons.map((person) => <Person 
+                        person={person} 
+                        key={person.id} 
+                        handleTime={handleTime}
+                        />)
                     }
                 </div>
                 <div>
-                    <Cart />
+                    <Cart person={person}/>
                 </div>
             </div>
         </div>

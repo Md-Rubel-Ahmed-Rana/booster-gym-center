@@ -1,8 +1,12 @@
-import React from 'react';
+
 import "./Cart.css"
 import Rubel from "./rubel.jpg"
  
-const Cart = () => {
+const Cart = ({person}) => {
+    let newTime = 0;
+    for(const newPerson of person){
+        newTime = newTime + newPerson.time;
+    }
     return (
         <div className='cart bg-white'>
             <div className='profile'>
@@ -40,12 +44,12 @@ const Cart = () => {
                 <h4>Exercise Details</h4>
                 <div className='d-flex justify-content-between p-2 bg-light'>
                     <h6>Exercise Time</h6>
-                    <p><small>0</small> Minutes</p>
+                    <p><small>{newTime}</small> Minutes</p>
                 </div>
             </div>
             <div className='d-flex justify-content-between mt-3 bg-light p-2'>
                 <h4>Break Time</h4>
-                <p><small>0</small> Minutes</p>
+                <p><small></small> Minutes</p>
             </div>
         </div>
     );
