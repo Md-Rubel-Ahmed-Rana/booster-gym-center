@@ -7,3 +7,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
+@media screen and (max-width: 700px) {
+    .persons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        text-align: center;
+    }
+    .main-section {
+        display: flex;
+        gap: 10px;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+}
