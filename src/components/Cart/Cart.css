@@ -29,3 +29,12 @@
 .time-details{
     margin-top: 50px;
 }
+
+.activity{
+    background-color: blue;
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}

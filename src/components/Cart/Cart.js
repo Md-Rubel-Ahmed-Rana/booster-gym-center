@@ -57,6 +57,9 @@ const Cart = ({person}) => {
                 <h4>Break Time</h4>
                 <p><small>{breakTime}</small> Minutes</p>
             </div>
+            <div>
+                <h3 className='activity'>Activity Completed</h3>
+            </div>
         </div>
     );
 };
