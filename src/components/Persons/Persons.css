@@ -1,0 +1,9 @@
+.main-section{
+    display: flex;
+    gap: 20px;
+}
+.persons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}

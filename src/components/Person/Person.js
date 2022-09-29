@@ -1,20 +1,17 @@
-import React from 'react';
 import "./Person.css"
-
-const Person = (props) => {
-    const {img, title, description, time} = props.person;
-    console.log(img);
+const Person = ({ person }) => {
+    const {img, title, description, time} = person;
     return (
-        <div className="col p-4 ">
-            <div className="card shadow-lg">
-                <img src={img} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
-                    <p className="card-text">{description.slice(0, 100)+ "..."}</p>
-                    <p>Required time: {time} Minutes</p>
-                </div>
-                <button className='bg-primary border-0 px-3 py-2 text-white'>Add To List</button>
+        <div className="person">
+            <img src={img}  alt="..." />
+            <div>
+                <h5>{title}</h5>
+                <p>{description.slice(0, 100)+ "..."}</p>
+                <p>Required time: {time} Minutes</p>
             </div>
+            <p>
+                <button className='bg-primary border-0 px-3 py-2 text-white'>Add To List</button>
+            </p>
         </div>
     );
 };
