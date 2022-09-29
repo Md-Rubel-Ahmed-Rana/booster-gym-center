@@ -2,6 +2,7 @@
     padding: 10px 20px;
     position: sticky;
     top: 0;
+    background-color: lightblue;
 
 }
 .profile{
@@ -22,8 +23,12 @@
 
 .break-time > button{
     border-radius: 50%;
-    padding: 5px;
-    background-color: white;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    color: white;
+    outline: none;
+
 }
 
 .time-details{

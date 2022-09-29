@@ -14,7 +14,7 @@ const Cart = ({person}) => {
         newTime = newTime + newPerson.time;
     }
     return (
-        <div className='cart bg-white'>
+        <div className='cart'>
             <div className='profile'>
                 <img src={Rubel} alt="" />
                 <div>
@@ -22,7 +22,7 @@ const Cart = ({person}) => {
                     <p>Sylhet, Bangladesh</p>
                 </div>
             </div>
-            <div className='d-flex justify-content-between mt-3 bg-light px-4 py-1 rounded-lg'>
+            <div className='d-flex justify-content-between mt-3 bg-light px-4 py-1 rounded'>
                 <div>
                     <h3 className='m-0'>55kg</h3>
                     <p>Weight</p>
@@ -38,7 +38,7 @@ const Cart = ({person}) => {
             </div>
             <div className='m-4'>
                 <h3>Add A Break</h3>
-                <div className='break-time bg-light p-3'>
+                <div className='break-time bg-light p-3 rounded'>
                     <button onClick={() => handleBreakTime(10)}><small>10</small>M</button>
                     <button onClick={() => handleBreakTime(20)}><small>20</small>M</button>
                     <button onClick={() => handleBreakTime(30)}><small>30</small>M</button>
@@ -50,12 +50,12 @@ const Cart = ({person}) => {
                 <h4>Exercise Details</h4>
                 <div className='d-flex justify-content-between p-2 bg-light'>
                     <h6>Exercise Time</h6>
-                    <p><small>{newTime}</small> Minutes</p>
+                    <p><strong>{newTime}</strong> Minutes</p>
                 </div>
             </div>
             <div className='d-flex justify-content-between mt-3 bg-light p-2'>
                 <h4>Break Time</h4>
-                <p><small>{breakTime}</small> Minutes</p>
+                <p><strong>{breakTime}</strong> Minutes</p>
             </div>
             <div>
                 <h3 className='activity'>Activity Completed</h3>

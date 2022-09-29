@@ -14,21 +14,23 @@ const Persons = () => {
             .then((data) => setPersons(data))
     }, [])
     const handleTime = (pinnedPerson) => {
-        const newPerson = [...person,pinnedPerson ]
+        const newPerson = [...person,pinnedPerson]
         setPerson(newPerson)
     }
     return (
         <div>
-            <Header />
             <div className="main-section">
-                <div className='persons'>
-                    {
-                        persons.map((person) => <Person 
-                        person={person} 
-                        key={person.id} 
-                        handleTime={handleTime}
-                        />)
-                    }
+                <div>
+                    <Header />
+                    <div className='persons'>
+                        {
+                            persons.map((person) => <Person
+                                person={person}
+                                key={person.id}
+                                handleTime={handleTime}
+                            />)
+                        }
+                    </div>
                 </div>
                 <div>
                     <Cart person={person}/>
